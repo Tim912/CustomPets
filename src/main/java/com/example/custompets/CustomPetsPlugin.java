@@ -8,7 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class CustomPetsPlugin extends JavaPlugin {
     private StatsManager statsManager;
 
-    @Override
+        getCommand("stats").setExecutor(new com.example.custompets.command.StatsCommand(this));
     public void onEnable() {
         statsManager = new StatsManager(this);
         statsManager.registerStat(new HealthStat());
