@@ -1,0 +1,22 @@
+package com.example.custompets.stats;
+
+public enum StatType {
+    HEALTH,
+    DEFENSE,
+    STRENGTH,
+    CRIT_CHANCE,
+    CRIT_DAMAGE,
+    INTELLIGENCE,
+    SPEED,
+    ATTACK_SPEED,
+    FEROCITY,
+    VITALITY,
+    MENDING,
+    SEA_CREATURE_CHANCE,
+    FISHING_SPEED,
+    PRISTINE,
+    MINING_SPEED,
+    MINING_FORTUNE,
+    FARMING_FORTUNE,
+    FORAGING_FORTUNE;
+}
