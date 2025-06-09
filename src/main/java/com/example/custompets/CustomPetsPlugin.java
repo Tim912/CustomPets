@@ -1,9 +1,9 @@
 package com.example.custompets;
 
 import com.example.custompets.stats.*;
-import com.example.custompets.command.StatsCommand;
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.plugin.PluginManager;
+
 
 public final class CustomPetsPlugin extends JavaPlugin {
     private StatsManager statsManager;
@@ -34,7 +34,8 @@ public final class CustomPetsPlugin extends JavaPlugin {
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new StatsListener(statsManager), this);
 
-        getCommand("stats").setExecutor(new StatsCommand());
+        getCommand("stats").setExecutor(new com.example.custompets.command.StatsCommand(this));
+
 
         getLogger().info("CustomPets enabled!");
     }
