@@ -6,13 +6,14 @@ import com.example.custompets.stats.StatsManager;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityRegainHealthEvent;
 import org.bukkit.event.entity.PotionSplashEvent;
 import org.bukkit.event.player.PlayerFishEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
+
 
 /** Utility methods for getting and setting player stats. */
 import static com.example.custompets.StatsUtil.getStats;
@@ -66,6 +67,7 @@ public class StatsListener implements Listener {
             damage += critDamage;
         }
         event.setDamage(damage);
+
         double ferocity = stats.get(StatType.FEROCITY);
         if (Math.random() < ferocity / 100.0) {
             event.getEntity().damage(damage, player);
@@ -153,5 +155,6 @@ public class StatsListener implements Listener {
             double intensity = event.getIntensity(entity);
             event.setIntensity(entity, intensity * (1 + mending / 100.0));
         }
+
     }
 }

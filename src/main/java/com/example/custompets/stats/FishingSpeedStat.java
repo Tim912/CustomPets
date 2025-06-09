@@ -4,6 +4,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+
 public class FishingSpeedStat implements Stat {
     @Override
     public StatType getType() {
@@ -12,8 +13,10 @@ public class FishingSpeedStat implements Stat {
 
     @Override
     public void apply(Player player, double value) {
+
         if (value <= 0) return;
         int amplifier = (int) value - 1;
         player.addPotionEffect(new PotionEffect(PotionEffectType.LUCK, Integer.MAX_VALUE, amplifier, true, false));
+
     }
 }

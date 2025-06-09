@@ -1,6 +1,8 @@
 package com.example.custompets.gui;
 
+
 import com.example.custompets.CustomPetsPlugin;
+
 import com.example.custompets.StatsUtil;
 import com.example.custompets.stats.PlayerStats;
 import com.example.custompets.stats.StatType;
@@ -111,5 +113,6 @@ public class StatsGUI {
 
     private static String format(StatType type) {
         return type.name().toLowerCase().replace('_', ' ');
+
     }
 }
