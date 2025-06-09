@@ -1,0 +1,4 @@
+name: CustomPets
+main: com.example.custompets.CustomPetsPlugin
+version: 1.21.4
+api-version: 1.20
